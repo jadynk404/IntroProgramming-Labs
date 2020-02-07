@@ -7,7 +7,7 @@ def main():
     g = "GPA:"
     gpa = 4.0
     name = input("Please enter your name: ")
-    year = input("Please enter what year you are (freshman/sophomore/junior/senior")
+    year = input("Please enter what year you are (freshman/sophomore/junior/senior "))
     
     print('Help the STEM major find her motivation!')
 
