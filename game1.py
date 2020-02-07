@@ -5,6 +5,7 @@
 def main():
     e = "Press enter to continue..."
     g = "GPA:"
+    gpa = 4.0
     name = input("Please enter your name: ")
     year = input("Please enter what year you are (freshman/sophomore/junior/senior")
     
@@ -13,7 +14,7 @@ def main():
                
     print()
     print("Welcome to", year," orienation", name, "! You begin your", year, " year, ready and eager to learn!")
-    print(g, 4.0)
+    print(g, gpa)
     input(e)
     print("... Two weeks later ...")
     
@@ -26,19 +27,19 @@ def main():
 
    
     print("You were late to class... with an incomplete project.")
-    print(g, 3.5)
+    print(g, gpa-.5)
     input(e)
 
     print("Congratulations,", name, "! After your teacher scolded you for your project, you",
           "found a pinch of motivation on the floor and finally finish that project!",
           "You turn it in 2 days late and luckily your teacher takes pity",
           "on you and accepts it.")
-    print(g, 3.8)
+    print(g, gpa-.5+.2)
     input(e)
 
     print("You feel relieved to see your grades back up and decide to give yourself a nice break as a reward",
-          "so you decide to skip your classes for the next day.")
-    print(g, 3.0)
+          "so you decide to skip your classes for the next week and a half")
+    print(g, gpa-1.2)
     input(e)
 
 
@@ -53,7 +54,7 @@ def main():
           "untill you graduate!")
     input(e)
     print("You power through all of your assignments and finish your", year, "year strong.")
-    print(g, 4.0)
+    print(g, gpa)
 
     print("You have won! Please play again!")
 
