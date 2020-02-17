@@ -9,6 +9,11 @@ def main():
         if c == y:
             x = 0
             print("Congratulations! You won!")
+            l = input("Do you like pythons?\n")
+            if l[0] == "y":
+                print("I'll keep that in mind. Have a nice day!")
+            else:
+                print("Good to know. Have a nice day!")
         else:
             p = input("Sorry. That's not it. Try Again?\n")
             
