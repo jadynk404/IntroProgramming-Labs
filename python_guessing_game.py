@@ -5,6 +5,7 @@ def main():
     while x==1:
         y = input("I'm thinking of an animal. Can you guess what it is?\n")
         c = "python"
+        y = y.lower()
         
         if c == y:
             x = 0
