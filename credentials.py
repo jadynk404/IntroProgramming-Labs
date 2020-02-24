@@ -4,31 +4,44 @@
 # Created: 2020-02-24
 x = 1
 import sys
+
+def name():
+    first = input("Please enter your first name: ")
+    last = input("Please enter your last name: ")
+    return first, last
+
+def username():
+    first, last = name()
+    uname = str(first + "." + last)
+    return uname
+    
+
+
 def main():
+    uname = username()
+
+    passwd = input("create a new password: ")
     while x == 1:
-        first = input("Please enter your first name: ")
-        last = input("Please enter your last name: ")
-
-        uname = first + "." + last
-
-        passwd = input("create a new password: ")
+       
     
         if len(passwd) < 8:
             x == 1
             print("The password must be at least 8 characters long.")
-            passwd = input("Create a new password: ")
+            passwd = str(input("Create a new password: "))
             if len(passwd) < 8:
-                return loop
+                x ==1   
             else:
                 x == 0
             print("This is a strong password.")
-            print("Your account has been created. Your new email address is", uname + "@marist.edu")
-            sys.exit()
+           
+            
 
         else:
             x == 0
             print("This is a strong password.")
             print("Your account has been created. Your new email address is", uname + "@marist.edu")
+            print("Your username is", uname, ".")
+            print("Your password is", passwd, ".")
             sys.exit()
             
 
