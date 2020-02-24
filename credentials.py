@@ -2,6 +2,8 @@
 # Lab #5 - Working with Strings and Functions
 # Author: Jadyn Kennedy
 # Created: 2020-02-24
+
+
 x = 1
 import sys
 
@@ -14,12 +16,9 @@ def username():
     first, last = name()
     uname = str(first + "." + last)
     return uname
-    
 
-
-def main():
-    uname = username()
-
+def checkpassword():
+    x = 1
     passwd = input("create a new password: ")
     while x == 1:
        
@@ -29,20 +28,30 @@ def main():
             print("The password must be at least 8 characters long.")
             passwd = str(input("Create a new password: "))
             if len(passwd) < 8:
-                x ==1   
+                x = 1   
             else:
-                x == 0
-            print("This is a strong password.")
-           
+                x = 0
+              
             
 
         else:
-            x == 0
+            x = 0
             print("This is a strong password.")
-            print("Your account has been created. Your new email address is", uname + "@marist.edu")
-            print("Your username is", uname, ".")
-            print("Your password is", passwd, ".")
-            sys.exit()
+    return passwd
+            
+
+
+
+def main():
+    uname = username().lower() #this makes sure that everything is lowercase
+    passwd = checkpassword()
+    print("Your account has been created. Your new email address is", uname + "@marist.edu")
+    print("Your username is", uname, ".")
+    print("Your password is", passwd, ".")
+    sys.exit()
+    
+
+   
             
 
 
