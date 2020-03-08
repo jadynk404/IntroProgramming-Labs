@@ -22,28 +22,24 @@ def checkpassword():
     passwd = input("create a new password: ")
     while x == 1:
        
-    
         if len(passwd) < 8:
             x == 1
             print("The password must be at least 8 characters long.")
             passwd = str(input("Create a new password: "))
             if len(passwd) < 8:
                 x = 1   
-            else:
-                x = 0
+        else:
+             x = 0
         while x == 0:
-            if (passwd.islower()) == True:
+            if (passwd.islower()) == True or (passwd.isupper()) == True:
+                x = 0
                 print("This password must contain both upper and lowercase letters.")
                 passwd = str(input("Please input a new password: "))
-            if (passwd.islower()) == False:
-                print("This is a strong password.")
+                
+            if (passwd.isupper()) == False and (passwd.islower()) == False:
                 x = 2
-            if (passwd.isupper()) == True:
-                print("This password must contain both upper and lowercase letters.")
-                passwd = str(input("Please input a new password: "))
-            if (passwd.isupper()) == False:
                 print("This is a strong password.")
-                x = 2
+
         
 
     return passwd
