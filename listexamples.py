@@ -1,4 +1,4 @@
-colors = ["PURPLE", "BLUE", "GREEN", "YELLOW", "ORANGE", "RED"]
+colors = ["BLUE", "NAVY", "GREEN", "YELLOW", "IVORY", "MAROON"]
 
 def showTitle():
     print("Color Preference Evaluator")
@@ -6,18 +6,18 @@ def showTitle():
 def promptForColor():
     color = input("Please input a color: ")
     color = color.strip()
+    color = color.upper()
     return color
 
 def praiseUser():
-    print("I love this color too. Nice choice.")
+    print("I like this color too. You chose nicely.")
     
 def ridiculeUser():
-    print("Really? This color sucks. Why would I include it in my list?")
+    print("What an awful color. Try to use better taste when picking next time.")
     
 def confirmColor():
     x = 1
     color = promptForColor()
-    color = color.upper()
     while x == 1:
         checktext = "You entered {}. Is this  correct? (Y/N)\n".format(color)
         confirm = input(checktext)
@@ -33,7 +33,6 @@ def confirmColor():
 def containsElement():
     x = 2
     color = confirmColor()
-    color = color.upper()
     while x == 2:
         if color == colors[0] or color == colors[1] or color == colors[2] or color == colors[3] or color == colors[4] or color == colors[5]:
             x = 0
@@ -45,5 +44,6 @@ def containsElement():
 def main():
     showTitle()
     containsElement()
+    
 main()
         
